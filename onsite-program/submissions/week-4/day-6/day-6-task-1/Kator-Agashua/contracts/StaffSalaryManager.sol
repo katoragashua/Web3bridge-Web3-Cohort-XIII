@@ -1,9 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.28;
-import "./interface/ITeacherSalaryManager.sol";
+import {IStaffSalaryManager} from "../interfaces/IStaffSalaryManager.sol";
 
-contract TeacherSalaryManager is ITeacherSalaryManager {
-
+contract StaffSalaryManager is IStaffSalaryManager {
     mapping(address => Staff) public addressToStaff;
     Staff[] public allStaff;
 
@@ -18,12 +17,15 @@ contract TeacherSalaryManager is ITeacherSalaryManager {
         _;
     }
 
-    function addTeacher(
+    function addStaff(
         string memory _name,
         Status _status,
         Role _role
     ) external {
-        require(addressToStaff[msg.sender].salary == 0, "Teacher already exists");
+        require(
+            addressToStaff[msg.sender].salary == 0,
+            "Teacher already exists"
+        );
 
         uint256 _salary;
 
@@ -36,7 +38,7 @@ contract TeacherSalaryManager is ITeacherSalaryManager {
         }
 
         if (_status == Status.PROBATION) {
-            _salary = 400; // 700 - 300
+            _salary -=300;
         } else if (_status == Status.UNEMPLOYED) {
             _salary = 0;
         }
@@ -53,7 +55,10 @@ contract TeacherSalaryManager is ITeacherSalaryManager {
         return allStaff.length;
     }
 
-    function updateStaffStatus(address _address, Status _status) external onlyOwner {
+    function updateStaffStatus(
+        address _address,
+        Status _status
+    ) external onlyOwner {
         addressToStaff[_address].status = _status;
     }
 
@@ -64,7 +69,10 @@ contract TeacherSalaryManager is ITeacherSalaryManager {
         require(staff.status == Status.EMPLOYED, "Staff not employed");
 
         uint256 amount = staff.salary * 1 ether;
-        require(address(this).balance >= amount, "Insufficient contract balance");
+        require(
+            address(this).balance >= amount,
+            "Insufficient contract balance"
+        );
 
         _staffAddress.transfer(amount);
     }

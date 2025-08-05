@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.28;
 
-interface ITeacherSalaryManager {
+interface IStaffSalaryManager {
     enum Status {
         EMPLOYED,
         UNEMPLOYED,
@@ -21,7 +21,7 @@ interface ITeacherSalaryManager {
         Role role;
     }
 
-    function addTeacher(
+    function addStaff(
         string memory _name,
         Status _status,
         Role _role
