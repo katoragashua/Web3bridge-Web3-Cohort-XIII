@@ -1,0 +1,117 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\pc\\Desktop\\code\\Web3bridge-Web3-Cohort-XIII\\onsite-program\\submissions\\week-5\\day-3\\Kator-Agashua\\staffsalary_factory\\contracts\\StaffSalaryManager.sol": {
+      "lastModificationDate": 1754569128751,
+      "contentHash": "5ac0d4c7c3a7386ef1ee6d858a9b4c8b",
+      "sourceName": "contracts/StaffSalaryManager.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IStaffSalaryManager.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "StaffSalaryManager"
+      ]
+    },
+    "C:\\Users\\pc\\Desktop\\code\\Web3bridge-Web3-Cohort-XIII\\onsite-program\\submissions\\week-5\\day-3\\Kator-Agashua\\staffsalary_factory\\interfaces\\IStaffSalaryManager.sol": {
+      "lastModificationDate": 1754566093386,
+      "contentHash": "eac59d3bff23550de4a663443c21102d",
+      "sourceName": "interfaces/IStaffSalaryManager.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "IStaffSalaryManager"
+      ]
+    },
+    "C:\\Users\\pc\\Desktop\\code\\Web3bridge-Web3-Cohort-XIII\\onsite-program\\submissions\\week-5\\day-3\\Kator-Agashua\\staffsalary_factory\\contracts\\StaffSalaryManagerFactory.sol": {
+      "lastModificationDate": 1754548609310,
+      "contentHash": "1a51aa75cc812db9aafab6fa75627ee4",
+      "sourceName": "contracts/StaffSalaryManagerFactory.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./StaffSalaryManager.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "StaffSalaryManagerFactory"
+      ]
+    }
+  }
+}
